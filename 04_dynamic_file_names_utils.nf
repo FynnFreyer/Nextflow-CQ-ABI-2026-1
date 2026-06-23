@@ -24,13 +24,14 @@ process clean_counts {
         path word_counts
 
     output:
-        path "clean_words.txt"
+        path "${clean_count_file}.txt"
 
     script:
+        clean_count_file = "${word_counts.getSimpleName()}.clean"
         """
         cat "$word_counts" \\
             | tr -s ' ' \\
             | cut -d ' ' -f 3 \\
-        > clean_words.txt
+        > "${clean_count_file}.txt"
         """
 }
