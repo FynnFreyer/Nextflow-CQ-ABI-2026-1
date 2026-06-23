@@ -20,7 +20,7 @@ process most_common_word {
             | sort \\
             | uniq -c \\
             | sort -n \\
-            | head -1 \\
+            | tail -1 \\
             | tr -s ' ' \\
             | cut -d ' ' -f 3 \\
         > most_common_word.txt
