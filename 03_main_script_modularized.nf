@@ -3,11 +3,7 @@ include { clean_counts as clean_most } from './03_modules_script_modularized'
 include { clean_counts as clean_least } from './03_modules_script_modularized'
 
 // input -- path to a dir with .fq.gz sample files
-// params.in = null
-
-params {
-    in: String = null
-}
+params.in = null
 
 process most_common_word {
     input:

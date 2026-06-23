@@ -33,7 +33,3 @@ process clean_counts {
         > clean_words.txt
         """
 }
-
-workflow test {
-    println("hello")
-}
