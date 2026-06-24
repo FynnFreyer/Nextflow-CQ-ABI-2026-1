@@ -1,6 +1,4 @@
 process count_words {
-    conda "bioconda::samtools:123-aoeu"
-
     input:
         path word_file
 
